@@ -1,24 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
 
+function handleAdd(){
+  setimages([,...Images])
+}
+
+function handleChange(){
+  console.log('working input')
+}
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section>
+      <div className='flex flex-wrapenter'>
+        <ShowImage/>
+      </div>
+      <div className='flex justify-between my-5'>
+        <input 
+        type='text'
+        className='p-2 border border-gray-800 shadow rounded'
+        onChange={handleChange}
+        />
+        <button className='p-2 bg-green-600 text-white' onClick={handleAdd}>Add New</button>
+      </div>
+    </section>
   );
 }
 
